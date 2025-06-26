@@ -1,4 +1,4 @@
-package com.dmdev.lesson2;
+package com.dmdev.oop.lesson2;
 
 public class Computer {
 

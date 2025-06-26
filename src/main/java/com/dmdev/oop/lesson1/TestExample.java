@@ -1,4 +1,4 @@
-package com.dmdev.lesson1;
+package com.dmdev.oop.lesson1;
 
 public class TestExample {
 
