@@ -2,11 +2,12 @@ package com.dmdev.oop.lesson8;
 
 public class TimeInterval {
 
-    private int seconds;
+    private static final int SECONDS_IN_MINUTE = 60;
+    private static final int MINUTES_IN_HOUR = 60;
 
-    private int minutes;
-
-    private int hours;
+    private final int seconds;
+    private final int minutes;
+    private final int hours;
 
     public TimeInterval(int totalSeconds) {
         this.hours = totalSeconds / 3600;
@@ -21,7 +22,7 @@ public class TimeInterval {
     }
 
     public int totalSeconds() {
-        return seconds + minutes * 60 + hours * 3600;
+        return seconds + minutes * SECONDS_IN_MINUTE + hours * SECONDS_IN_MINUTE * MINUTES_IN_HOUR;
     }
 
     public TimeInterval sum(TimeInterval second) {
