@@ -2,10 +2,10 @@ package com.dmdev.lesson2;
 
 public class Computer {
 
-    int ssd = 500;
-    long ram;
+    private int ssd = 500;
+    private long ram;
 
-    Computer() {
+    public Computer() {
         System.out.println("Я был создан");
     }
 
@@ -14,7 +14,7 @@ public class Computer {
         ram = 999;
     }
 
-    Computer(int ssd, long newRam) {
+    protected Computer(int ssd, long newRam) {
         this.ssd = ssd;
         ram = newRam;
     }
