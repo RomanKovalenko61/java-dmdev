@@ -2,10 +2,23 @@ package com.dmdev.oop.lesson11;
 
 public class Laptop extends Computer {
 
-    private final int weight;
+    private int weight;
+
+    {
+        System.out.println("Init block laptop");
+    }
+
+    static {
+        System.out.println("Static block laptop");
+    }
 
     public Laptop(Ssd ssd, Ram ram, int weight) {
+        super(ssd, ram);
         this.weight = weight;
+    }
+
+    public Laptop() {
+        System.out.println("Constructor laptop");
     }
 
     public void open() {

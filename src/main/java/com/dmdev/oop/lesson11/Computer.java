@@ -5,6 +5,14 @@ public class Computer {
     private Ssd ssd;
     private Ram ram;
 
+    {
+        System.out.println("Init block computer");
+    }
+
+    static {
+        System.out.println("Static block computer");
+    }
+
     public Computer(Ssd ssd, Ram ram) {
         super();
         this.ssd = ssd;
@@ -12,6 +20,7 @@ public class Computer {
     }
 
     public Computer() {
+        System.out.println("Constructor computer");
     }
 
     public void load() {
