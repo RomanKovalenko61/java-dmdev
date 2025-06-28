@@ -5,7 +5,6 @@ public class Laptop extends Computer {
     private final int weight;
 
     public Laptop(Ssd ssd, Ram ram, int weight) {
-        super(ssd, ram);
         this.weight = weight;
     }
 
