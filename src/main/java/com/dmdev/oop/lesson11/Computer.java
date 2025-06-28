@@ -13,4 +13,12 @@ public class Computer {
     public void load() {
         System.out.println("Я загрузился");
     }
+
+    public Ssd getSsd() {
+        return ssd;
+    }
+
+    public Ram getRam() {
+        return ram;
+    }
 }
