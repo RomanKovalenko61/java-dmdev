@@ -2,7 +2,7 @@ package com.dmdev.oop.lesson20.person;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     private final int id;
     private final String firstName;
@@ -46,5 +46,10 @@ public class Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return Integer.compare(this.id, o.id);
     }
 }
