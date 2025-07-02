@@ -1,10 +1,14 @@
 package com.dmdev.oop.lesson21;
 
-// can convert to record
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Student {
 
     private final int age;
     private final String name;
+    List<Integer> marks = new ArrayList<>();
 
     public Student(int age, String name) {
         this.age = age;
@@ -17,5 +21,17 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public List<Integer> getMarks() {
+        return marks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
