@@ -2,6 +2,7 @@ package com.dmdev.oop.lesson22;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FileRunner {
 
@@ -17,6 +18,6 @@ public class FileRunner {
 
         File dir = new File("resources/test/dir");
         dir.mkdirs();
-        dir.list();
+        System.out.println(Arrays.toString(dir.list()));
     }
 }
