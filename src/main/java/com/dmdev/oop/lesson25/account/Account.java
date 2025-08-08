@@ -1,9 +1,13 @@
 package com.dmdev.oop.lesson25.account;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Account {
 
     private static int generator = 1;
-    private int id;
+    private final Lock lock = new ReentrantLock();
+    private final int id;
     private int money;
 
     public Account(int money) {
@@ -21,6 +25,10 @@ public class Account {
             return true;
         }
         return false;
+    }
+
+    public Lock getLock() {
+        return lock;
     }
 
     @Override
