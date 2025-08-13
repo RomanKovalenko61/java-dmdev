@@ -1,11 +1,12 @@
 package com.dmdev.oop.lesson28.model;
 
 import java.lang.reflect.*;
+import java.util.Arrays;
 
 public class ReflectionApiExample {
 
-    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        var user = new User(25L, "Ivan");
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        var user = new User(25L, "Ivan", 24);
 //        Class<? extends User> userClass = user.getClass();
 //        Class<User> userClass1 = User.class;
 //        System.out.println(userClass == userClass1); // true
@@ -66,6 +67,9 @@ public class ReflectionApiExample {
         testFields(user);
 //        testMethod(user);
         System.out.println(user);
+
+        System.out.println(User.class.getDeclaredField("age").getAnnotation(MinAge.class).age()); // 21
+        System.out.println(Arrays.toString(User.class.getDeclaredField("age").getAnnotations())); // [@com.dmdev.oop.lesson28.model.MinAge(age=21)]
     }
 
     private static void testConstructor() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
